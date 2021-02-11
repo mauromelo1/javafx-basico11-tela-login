@@ -14,10 +14,12 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
+			String arquivoCSS = getClass().getResource("/gui/Login.css").toExternalForm();
 			URL arquivoFXML = getClass().getResource("/gui/Login.fxml");
 			GridPane raiz = FXMLLoader.load(arquivoFXML);
 			
 			Scene cena = new Scene(raiz);
+			cena.getStylesheets().add(arquivoCSS);
 			
 			primaryStage.setResizable(false);
 			primaryStage.setTitle("Tela de Login");

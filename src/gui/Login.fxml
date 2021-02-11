@@ -1,48 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.PasswordField?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-<GridPane prefHeight="100.0" prefWidth="255.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" 
-fx:controller="gui.LoginControlador" styleClass="login">
+<GridPane prefHeight="100.0" prefWidth="240.0"
+	xmlns="http://javafx.com/javafx/11.0.1"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="gui.LoginControlador" styleClass="login" hgap="15"
+	vgap="15">
 
-	<Label text="Seja Bem Vindo" 
-		styleClass="login-titulo"
-		GridPane.columnIndex="0" GridPane.rowIndex="0" />
+	<padding>
+		<Insets left="10"  top="10" />
+	</padding>
+	
+	<Label text="Seja Bem Vindo" styleClass="login-titulo"
+		GridPane.columnIndex="0" GridPane.rowIndex="0" 
+		GridPane.columnSpan="2"  GridPane.halignment="CENTER"/>
 
 
-	<Label text="E-mail: " 
-		styleClass="login-form-label"
+	<Label text="E-mail: " styleClass="login-form-label"
 		GridPane.columnIndex="0" GridPane.rowIndex="1" />
-	<TextField fx:id="campoEmail" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+	<TextField fx:id="campoEmail" GridPane.columnIndex="1"
+		GridPane.rowIndex="1" />
 
 
-	<Label text="Senha: " 
-		styleClass="login-form-label"
+	<Label text="Senha: " styleClass="login-form-label"
 		GridPane.columnIndex="0" GridPane.rowIndex="2" />
-	<PasswordField fx:id="campoSenha" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+	<PasswordField fx:id="campoSenha"
+		GridPane.columnIndex="1" GridPane.rowIndex="2" />
 
 
-	<Button text="Entrar" 
-		styleClass="login-form-botao"
+	<Button text="Entrar" styleClass="login-form-botao"
 		GridPane.columnIndex="0" GridPane.rowIndex="3"
+		GridPane.columnSpan="2"  GridPane.halignment="CENTER"
 		onAction="#entrar">
 	</Button>
-   <columnConstraints>
-      <ColumnConstraints />
-      <ColumnConstraints />
-   </columnConstraints>
-   <rowConstraints>
-      <RowConstraints />
-      <RowConstraints />
-      <RowConstraints />
-      <RowConstraints />
-   </rowConstraints>
-
-
+	
 </GridPane>
